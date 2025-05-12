@@ -13,10 +13,10 @@ function Feature() {
               </div>
               <div className="flex gap-2 flex-col">
                 <h2 className="text-3xl lg:text-5xl tracking-tighter max-w-xl text-left font-regular">
-                  Something new!
+                  Open-world Storytelling
                 </h2>
                 <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-left">
-                  Managing a small business today is already tough.
+                  Like a Minecraft of stories.
                 </p>
               </div>
             </div>
@@ -24,33 +24,42 @@ function Feature() {
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-primary" />
                 <div className="flex flex-col gap-1">
-                  <p>Easy to use</p>
+                  <p>Smart Relationship Graphs</p>
                   <p className="text-muted-foreground text-sm">
-                    We&apos;ve made it easy to use and understand.
+                    Every choice influences your relationships.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-primary" />
                 <div className="flex flex-col gap-1">
-                  <p>Fast and reliable</p>
+                  <p>Deep Memory Preservation</p>
                   <p className="text-muted-foreground text-sm">
-                    We&apos;ve made it fast and reliable.
+                    Never lose a hold of what you've done in the past.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-primary" />
                 <div className="flex flex-col gap-1">
-                  <p>Beautiful and modern</p>
+                  <p>Unexpected Agentic Subplots</p>
                   <p className="text-muted-foreground text-sm">
-                    We&apos;ve made it beautiful and modern.
+                    Watch your world create and react to unexpected-yet-coherent events.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="bg-muted rounded-md aspect-square"></div>
+          <div className="bg-muted rounded-md aspect-square flex items-center justify-center overflow-hidden">
+            <video
+              src="/sr.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover rounded-md"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -36,9 +36,17 @@ function Navbar() {
   );
 }
 
+function Footer() {
+  return (
+    <footer className="w-full bg-white text-gray-400 text-center py-4 mt-8 pb-10 pt-10 relative z-50 shadow-[0_-2px_8px_#0001] font-mono">
+      © {new Date().getFullYear()} World37.
+    </footer>
+  );
+}
+
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="flex flex-col min-h-screen relative overflow-hidden">
       <Navbar />
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
@@ -66,30 +74,47 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen pt-40">
-        <main className="flex flex-col items-center">
+      <div className="flex-1 flex items-center justify-center pt-32 z-10">
+        <main className="flex flex-col items-center w-full">
           <Image
             src="/image.png"
             alt="World37"
             width={200}
             height={200}
-            className="mb-2"
+            className="mb-4"
           />
           <FuzzyText 
             baseIntensity={0.2} 
             hoverIntensity={0.4} 
             enableHover={true}
             color="#000000"
-            className="font-mono "
+            className="font-mono"
           >
             World37
           </FuzzyText>
-          <p className="text-2xl mt-10 text-gray-500" >A new standard for scalable, technology-driven storytelling.</p>
-          <ContainerScroll>
-            <Feature />
-          </ContainerScroll>
+          <p className="text-2xl mt-6 text-gray-500 text-center">
+            A new standard for scalable, technology-driven storytelling.
+          </p>
+          
+          <div className="-mt-20 w-full -mb-20">
+          <h2
+            className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-b from-black to-gray-400 bg-clip-text text-transparent mt-30 "
+          >
+            Pick your story, watch your world react.
+          </h2>
+          <div className="text-base md:text-lg text-gray-700 font-mono text-center mt-1 mb-0">
+            Smart relationship graphs, deep memory preservation, unexpected agentic subplots.
+          </div>
+          <div className="-mt-60">
+            <ContainerScroll titleComponent={null}>
+              <Feature />
+            </ContainerScroll>
+          </div>
+            
+          </div>
         </main>
       </div>
+      <Footer />
     </div>
   );
 }
