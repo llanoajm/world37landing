@@ -10,6 +10,7 @@ import { Feature } from "./components/ui/feature";
 import { ScrollPane } from "./components/ui/scroll-pane";
 import { WaitlistModal } from "./components/ui/waitlist-modal";
 import { useState } from "react";
+import { NeonMazeDemo } from "./components/ui/neon-maze-demo"
 
 function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
   return (
@@ -21,7 +22,7 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
           <rect width="32" height="32" rx="8" fill="#222" />
           <circle cx="16" cy="16" r="8" fill="#fff" />
         </svg>
-        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-purple-700 via-pink-600 to-orange-400 bg-clip-text text-transparent z-50">WORLD37</span>
+        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-black via-black to-gray-400 bg-clip-text text-transparent z-50">world37</span>
       </div>
       {/* Center links */}
       <div className="flex-1 flex justify-center">
@@ -121,37 +122,23 @@ export default function Home() {
           </div>
           <ScrollPane />
           {/* Showcase Section */}
-          <section className="w-full flex justify-center py-8 px-2">
-            <div className="w-full max-w-5xl bg-white/70 dark:bg-black/70 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col items-center p-4 sm:p-8 md:p-12 gap-6 md:gap-10">
+          <section className="w-full flex flex-col lg:flex-row items-stretch justify-center py-12 px-0">
+            {/* Left: Endless Possibilities with images */}
+            <div className="flex-[0.8] min-w-0 flex flex-col justify-center bg-white/70 dark:bg-black/70 backdrop-blur-lg shadow-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-8 md:p-12 gap-6 md:gap-10">
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-gray-900 dark:text-gray-100 mb-2 md:mb-6 drop-shadow">
                 Endless Possibilities
               </h2>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full">
-                <Image
-                  src="/i1.png"
-                  alt="i1"
-                  width={260}
-                  height={260}
-                  className="rounded-2xl shadow-xl object-cover w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-auto"
-                />
-                <Image
-                  src="/i2.png"
-                  alt="i2"
-                  width={260}
-                  height={260}
-                  className="rounded-2xl shadow-xl object-cover w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-auto"
-                />
-                <Image
-                  src="/i3.png"
-                  alt="i3"
-                  width={260}
-                  height={260}
-                  className="rounded-2xl shadow-xl object-cover w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-auto"
-                />
+              <div className="flex flex-row flex-wrap items-center justify-center gap-4 w-full">
+                <Image src="/i1.png" alt="i1" width={300} height={300} className="shadow-2xl object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
+                <Image src="/i2.png" alt="i2" width={300} height={300} className="shadow-2xl object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
               </div>
               <p className="text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-100 text-center max-w-3xl font-mono mt-2">
                 Pioneering advancements in real-time content generation, procedural 3D environments, and emergent behaviors.
               </p>
+            </div>
+            {/* Right: Neon Maze */}
+            <div className="flex-[0.7] min-w-0 min-h-[400px] max-h-[700px] overflow-hidden flex flex-col items-center justify-center bg-black">
+              <NeonMazeDemo />
             </div>
           </section>
         </main>
