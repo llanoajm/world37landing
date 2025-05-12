@@ -28,7 +28,7 @@ export function ScrollPane() {
             A World of Dynamic Stories
           </h3>
           <p className="text-gray-700 text-xl md:text-2xl mb-4 max-w-2xl">
-          Our platform empowers users to create, share, and explore 3D story worlds, leveraging advanced AI technologies such as narrative branching, dynamic scene deployment, and generative agents to deliver deeply personalized and dynamic experiences.
+          Our stories will feel rich to you, your friends, and every character in your world! Create, share, and explore 3D story worlds with narrative branching, dynamic scene deployment, and generative agents to deliver deeply personalized experiences.
           </p>
           <div className="flex flex-row gap-4 mt-4">
             <a
