@@ -113,7 +113,7 @@ export default function Home() {
           <h2
             className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-b from-black to-gray-400 bg-clip-text text-transparent mt-30 "
           >
-            Pick your story, watch your world react.
+            Pick your story, watch your world propagate.
           </h2>
 
           <div className="-mt-60">
