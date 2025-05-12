@@ -16,7 +16,7 @@ function Feature() {
                   Open-world Storytelling
                 </h2>
                 <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-left">
-                  Like a Minecraft of stories.
+                  Like a Minecraft for stories.
                 </p>
               </div>
             </div>

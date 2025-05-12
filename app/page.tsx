@@ -8,8 +8,10 @@ import { ContainerScroll } from "./components/ui/container-scroll-animation";
 import { Check } from "lucide-react";
 import { Feature } from "./components/ui/feature";
 import { ScrollPane } from "./components/ui/scroll-pane";
+import { WaitlistModal } from "./components/ui/waitlist-modal";
+import { useState } from "react";
 
-function Navbar() {
+function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#f7f9f8] border-b border-gray-100 h-16 flex items-center px-8">
       {/* Logo */}
@@ -24,14 +26,18 @@ function Navbar() {
       {/* Center links */}
       <div className="flex-1 flex justify-center">
         <ul className="flex space-x-10">
-          <li><a href="#demo" className="text-gray-700 font-mono text-lg hover:text-black transition-colors">Demo</a></li>
-          <li><a href="#about" className="text-gray-700 font-mono text-lg hover:text-black transition-colors">About</a></li>
-          <li><a href="#team" className="text-gray-700 font-mono text-lg hover:text-black transition-colors">Team</a></li>
+        
         </ul>
       </div>
       {/* Right button */}
       <div className="flex items-center">
-        <a href="#waitlist" className="ml-4 px-5 py-2 rounded-lg bg-black text-white font-mono text-base font-semibold shadow hover:bg-gray-900 transition-colors">Join Waitlist</a>
+        <a
+          href="#"
+          onClick={e => { e.preventDefault(); onWaitlistClick(); }}
+          className="ml-4 px-5 py-2 rounded-lg bg-black text-white font-mono text-base font-semibold shadow hover:bg-gray-900 transition-colors"
+        >
+          Join Waitlist
+        </a>
       </div>
     </nav>
   );
@@ -46,9 +52,11 @@ function Footer() {
 }
 
 export default function Home() {
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
-      <Navbar />
+      <Navbar onWaitlistClick={() => setWaitlistOpen(true)} />
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
         <AnimatedGradientBackground 
@@ -112,9 +120,24 @@ export default function Home() {
             
           </div>
           <ScrollPane />
+          {/* Showcase Section */}
+          <section className="w-full flex justify-center py-16 px-2">
+            <div className="w-full max-w-5xl bg-white rounded-3xl shadow-2xl flex flex-col items-center p-8 md:p-16 gap-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-900 mb-6">Endless Possibilities</h2>
+              <div className="flex flex-row items-center justify-center gap-10 mb-8">
+                <Image src="/i1.png" alt="i1" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
+                <Image src="/i2.png" alt="i2" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
+                <Image src="/i3.png" alt="i3" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
+              </div>
+              <p className="text-base md:text-lg text-gray-700 text-center max-w-3xl font-semibold">
+                Behind the scenes, we are pioneering advancements in real-time content generation, procedural 3D environments, and emergent behaviors. These technologies not only push the boundaries of interactive storytelling but also lay the groundwork for future integrations, including a general API that functions as a story engine, and AR. It's not just about creating stories; it's about redefining the relationship between creators, technology, and audiences. We are pushing the boundaries of what generative systems can achieve, setting a new standard for interactive entertainment.
+              </p>
+            </div>
+          </section>
         </main>
       </div>
       <Footer />
+      <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
     </div>
   );
 }
