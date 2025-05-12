@@ -21,7 +21,7 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
           <rect width="32" height="32" rx="8" fill="#222" />
           <circle cx="16" cy="16" r="8" fill="#fff" />
         </svg>
-        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">WORLD37</span>
+        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-purple-700 via-pink-600 to-orange-400 bg-clip-text text-transparent">WORLD37</span>
       </div>
       {/* Center links */}
       <div className="flex-1 flex justify-center">
@@ -122,15 +122,15 @@ export default function Home() {
           <ScrollPane />
           {/* Showcase Section */}
           <section className="w-full flex justify-center py-16 px-2">
-            <div className="w-full max-w-5xl bg-white rounded-3xl shadow-2xl flex flex-col items-center p-8 md:p-16 gap-8">
-              <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-900 mb-6">Endless Possibilities</h2>
+            <div className="w-full max-w-6xl bg-black rounded-3xl shadow-2xl flex flex-col items-center p-8 md:p-16 gap-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-200 mb-6">Endless Possibilities</h2>
               <div className="flex flex-row items-center justify-center gap-10 mb-8">
                 <Image src="/i1.png" alt="i1" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
                 <Image src="/i2.png" alt="i2" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
                 <Image src="/i3.png" alt="i3" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
               </div>
-              <p className="text-base md:text-lg text-gray-700 text-center max-w-3xl font-semibold">
-                Behind the scenes, we are pioneering advancements in real-time content generation, procedural 3D environments, and emergent behaviors. These technologies not only push the boundaries of interactive storytelling but also lay the groundwork for future integrations, including a general API that functions as a story engine, and AR. It's not just about creating stories; it's about redefining the relationship between creators, technology, and audiences. We are pushing the boundaries of what generative systems can achieve, setting a new standard for interactive entertainment.
+              <p className="text-base md:text-lg text-gray-100 text-center max-w-3xl font-mono">
+                Pioneering advancements in real-time content generation, procedural 3D environments, and emergent behaviors.
               </p>
             </div>
           </section>
