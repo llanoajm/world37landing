@@ -146,7 +146,87 @@ export default function Home() {
         </main>
       </div>
       <Footer />
+      {/* Waitlist Form Section */}
+
       <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
     </div>
+  );
+}
+
+function WaitlistForm() {
+  const [first, setFirst] = useState("");
+  const [last, setLast] = useState("");
+  const [email, setEmail] = useState("");
+  const [early, setEarly] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    const subject = encodeURIComponent("World37 Demo Waitlist: " + first + " " + last);
+    const body = encodeURIComponent(
+      `First Name: ${first}\nLast Name: ${last}\nEmail: ${email}\nEarly Testing: ${early ? "Yes" : "No"}`
+    );
+    window.location.href = `mailto:llano@stanford.edu?subject=${subject}&body=${body}`;
+    setSubmitting(false);
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return <div className="text-center text-green-600 font-semibold py-8 z-75">Thank you for joining the waitlist!</div>;
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <label className="font-semibold text-black dark:text-white">
+        First Name:
+        <input
+          type="text"
+          className="mt-1 w-full border rounded px-3 py-2 text-black dark:text-white dark:bg-zinc-800"
+          placeholder="Your First Name"
+          value={first}
+          onChange={e => setFirst(e.target.value)}
+          required
+        />
+      </label>
+      <label className="font-semibold text-black dark:text-white">
+        Last Name:
+        <input
+          type="text"
+          className="mt-1 w-full border rounded px-3 py-2 text-black dark:text-white dark:bg-zinc-800"
+          placeholder="Your Last Name"
+          value={last}
+          onChange={e => setLast(e.target.value)}
+          required
+        />
+      </label>
+      <label className="font-semibold text-black dark:text-white">
+        Email:
+        <input
+          type="email"
+          className="mt-1 w-full border rounded px-3 py-2 text-black dark:text-white dark:bg-zinc-800"
+          placeholder="Your Email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+        />
+      </label>
+      <label className="flex items-center gap-2 text-black dark:text-white">
+        <input
+          type="checkbox"
+          checked={early}
+          onChange={e => setEarly(e.target.checked)}
+        />
+        I want to be part of the early testing group.
+      </label>
+      <button
+        type="submit"
+        className="mt-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded transition"
+        disabled={submitting}
+      >
+        Submit
+      </button>
+    </form>
   );
 }

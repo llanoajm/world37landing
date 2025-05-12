@@ -1,6 +1,6 @@
 "use client";
 import { motion, useAnimation, useInView } from "framer-motion";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 export function ScrollPane() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,7 +32,7 @@ export function ScrollPane() {
           </p>
           <div className="flex flex-row gap-4 mt-4">
             <a
-              href="#"
+              href="#waitlist-form"
               className="inline-flex items-center gap-3 px-8 py-3 rounded-xl bg-black text-white font-mono text-xl font-semibold shadow-lg hover:bg-gray-900 transition-colors border-2 border-black w-fit"
               style={{ letterSpacing: "0.1em" }}
             >
@@ -44,8 +44,8 @@ export function ScrollPane() {
               SOON
             </a>
             <a
-              href="#"
-              className="inline-flex items-center gap-3 px-8 py-3 rounded-xl bg-white text-black font-mono text-xl font-semibold shadow-lg hover:bg-gray-900 transition-colors border-2 border-black w-fit"
+              href="#waitlist-form"
+              className="inline-flex items-center gap-3 px-8 py-3 rounded-xl bg-white text-black font-mono text-xl font-semibold shadow-lg hover:bg-gray-200 transition-colors border-2 border-black w-fit"
               style={{ letterSpacing: "0.1em" }}
             >
               <img
@@ -56,8 +56,8 @@ export function ScrollPane() {
               SOON
             </a>
             <a
-              href="#"
-              className="inline-flex items-center gap-3 px-8 py-3 rounded-xl bg-white text-black font-mono text-xl font-semibold shadow-lg hover:bg-gray-900 transition-colors border-2 border-black w-fit"
+              href="#waitlist-form"
+              className="inline-flex items-center gap-3 px-8 py-3 rounded-xl bg-white text-black font-mono text-xl font-semibold shadow-lg hover:bg-gray-200 transition-colors border-2 border-black w-fit"
               style={{ letterSpacing: "0.1em" }}
             >
               <img
