@@ -25,7 +25,7 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
           height={32}
           className="mr-2 object-contain"
         />
-        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent z-50">world37</span>
+        <span className=" text-xl tracking-tight bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent z-50">world37</span>
       </div>
       {/* Center links */}
       <div className="flex-1 flex justify-center">
@@ -103,7 +103,7 @@ export default function Home() {
             color="#000000"
             className="font-mono z-50"
           >
-            World37
+            WORLD37
           </FuzzyText>
           <p className="text-2xl mt-6 text-gray-500 text-center">
             A new standard for scalable, technology-driven storytelling.
