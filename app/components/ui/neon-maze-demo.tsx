@@ -17,7 +17,7 @@ export function NeonMazeDemo() {
               pointerEvents: "auto",
               // Reduced zoom for less cropping
               width: "35vw",
-              height: "80vw", // 16:9 ratio, but less zoomed in
+              height: "90vw", // 16:9 ratio, but less zoomed in
               minWidth: "100%",
               minHeight: "100%",
             }}
