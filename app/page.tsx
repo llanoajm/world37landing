@@ -21,7 +21,7 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
           <rect width="32" height="32" rx="8" fill="#222" />
           <circle cx="16" cy="16" r="8" fill="#fff" />
         </svg>
-        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-purple-700 via-pink-600 to-orange-400 bg-clip-text text-transparent">WORLD37</span>
+        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-purple-700 via-pink-600 to-orange-400 bg-clip-text text-transparent z-50">WORLD37</span>
       </div>
       {/* Center links */}
       <div className="flex-1 flex justify-center">
@@ -97,7 +97,7 @@ export default function Home() {
             hoverIntensity={0.4} 
             enableHover={true}
             color="#000000"
-            className="font-mono"
+            className="font-mono z-50"
           >
             World37
           </FuzzyText>
@@ -121,15 +121,35 @@ export default function Home() {
           </div>
           <ScrollPane />
           {/* Showcase Section */}
-          <section className="w-full flex justify-center py-16 px-2">
-            <div className="w-full max-w-6xl bg-black rounded-3xl shadow-2xl flex flex-col items-center p-8 md:p-16 gap-8">
-              <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-200 mb-6">Endless Possibilities</h2>
-              <div className="flex flex-row items-center justify-center gap-10 mb-8">
-                <Image src="/i1.png" alt="i1" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
-                <Image src="/i2.png" alt="i2" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
-                <Image src="/i3.png" alt="i3" width={260} height={260} className="rounded-2xl shadow-2xl object-cover" />
+          <section className="w-full flex justify-center py-8 px-2">
+            <div className="w-full max-w-5xl bg-white/70 dark:bg-black/70 backdrop-blur-lg rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col items-center p-4 sm:p-8 md:p-12 gap-6 md:gap-10">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-gray-900 dark:text-gray-100 mb-2 md:mb-6 drop-shadow">
+                Endless Possibilities
+              </h2>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full">
+                <Image
+                  src="/i1.png"
+                  alt="i1"
+                  width={260}
+                  height={260}
+                  className="rounded-2xl shadow-xl object-cover w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-auto"
+                />
+                <Image
+                  src="/i2.png"
+                  alt="i2"
+                  width={260}
+                  height={260}
+                  className="rounded-2xl shadow-xl object-cover w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-auto"
+                />
+                <Image
+                  src="/i3.png"
+                  alt="i3"
+                  width={260}
+                  height={260}
+                  className="rounded-2xl shadow-xl object-cover w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-auto"
+                />
               </div>
-              <p className="text-base md:text-lg text-gray-100 text-center max-w-3xl font-mono">
+              <p className="text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-100 text-center max-w-3xl font-mono mt-2">
                 Pioneering advancements in real-time content generation, procedural 3D environments, and emergent behaviors.
               </p>
             </div>
