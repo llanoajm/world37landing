@@ -124,17 +124,16 @@ export default function Home() {
           {/* Showcase Section */}
           <section className="w-full flex flex-col lg:flex-row items-stretch justify-center py-12 px-0">
             {/* Left: Endless Possibilities with images */}
-            <div className="flex-[0.8] min-w-0 flex flex-col justify-center bg-white/70 dark:bg-black/70 backdrop-blur-lg shadow-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-8 md:p-12 gap-6 md:gap-10">
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-gray-900 dark:text-gray-100 mb-2 md:mb-6 drop-shadow">
-                Endless Possibilities
-              </h2>
-              <div className="flex flex-row flex-wrap items-center justify-center gap-4 w-full">
-                <Image src="/i1.png" alt="i1" width={300} height={300} className="shadow-2xl object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
-                <Image src="/i2.png" alt="i2" width={300} height={300} className="shadow-2xl object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
-              </div>
-              <p className="text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-100 text-center max-w-3xl font-mono mt-2">
+            <div className="flex-[0.8] min-w-0 flex flex-col justify-center bg-white/70 dark:bg-black backdrop-blur-lg shadow-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-8 md:p-12 gap-6 md:gap-10">
+              <p className="text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-100 text-center max-w-3xl font-mono mb-4">
                 Pioneering advancements in real-time content generation, procedural 3D environments, and emergent behaviors.
               </p>
+          
+              <div className="flex flex-row flex-wrap items-center justify-center gap-4 w-full">
+                <Image src="/i1.png" alt="i1" width={300} height={300} className="rounded-2xl shadow-2xl shadow-[0_4px_32px_rgba(255,255,255,0.35)] object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
+                <Image src="/i2.png" alt="i2" width={300} height={300} className="rounded-2xl shadow-2xl shadow-[0_4px_32px_rgba(255,255,255,0.35)] object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
+                <Image src="/i3.png" alt="i3" width={300} height={300} className="rounded-2xl shadow-2xl shadow-[0_4px_32px_rgba(255,255,255,0.35)] object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
+              </div>
             </div>
             {/* Right: Neon Maze */}
             <div className="flex-[0.7] min-w-0 min-h-[400px] max-h-[700px] overflow-hidden flex flex-col items-center justify-center bg-black">
