@@ -17,12 +17,15 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#f7f9f8] border-b border-gray-100 h-16 flex items-center px-8">
       {/* Logo */}
       <div className="flex items-center flex-shrink-0">
-        {/* Placeholder SVG logo */}
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
-          <rect width="32" height="32" rx="8" fill="#222" />
-          <circle cx="16" cy="16" r="8" fill="#fff" />
-        </svg>
-        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-black via-black to-gray-400 bg-clip-text text-transparent z-50">world37</span>
+        {/* Official PNG logo */}
+        <img
+          src="https://caojess.github.io/OfficialW37/W37logo.png"
+          alt="World37 Logo"
+          width={32}
+          height={32}
+          className="mr-2 object-contain"
+        />
+        <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent z-50">world37</span>
       </div>
       {/* Center links */}
       <div className="flex-1 flex justify-center">
