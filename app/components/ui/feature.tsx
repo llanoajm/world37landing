@@ -52,7 +52,7 @@ function Feature() {
           </div>
           <div className="bg-muted rounded-md aspect-square flex items-center justify-center overflow-hidden">
             <video
-              src="/sr.mp4"
+              src="/dem.mp4"
               autoPlay
               loop
               muted

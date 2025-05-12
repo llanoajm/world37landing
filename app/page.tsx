@@ -7,6 +7,7 @@ import { NoiseOverlay } from "./components/ui/noise-overlay";
 import { ContainerScroll } from "./components/ui/container-scroll-animation";
 import { Check } from "lucide-react";
 import { Feature } from "./components/ui/feature";
+import { ScrollPane } from "./components/ui/scroll-pane";
 
 function Navbar() {
   return (
@@ -102,9 +103,7 @@ export default function Home() {
           >
             Pick your story, watch your world react.
           </h2>
-          <div className="text-base md:text-lg text-gray-700 font-mono text-center mt-1 mb-0">
-            Smart relationship graphs, deep memory preservation, unexpected agentic subplots.
-          </div>
+
           <div className="-mt-60">
             <ContainerScroll titleComponent={null}>
               <Feature />
@@ -112,6 +111,7 @@ export default function Home() {
           </div>
             
           </div>
+          <ScrollPane />
         </main>
       </div>
       <Footer />
