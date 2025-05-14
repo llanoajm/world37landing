@@ -18,6 +18,9 @@ function Feature() {
                 <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-left">
                   Like a Minecraft for stories.
                 </p>
+                <p>
+                  Minecraft is a spatially open-world game. W37 is all about making narratively open-world games.
+                </p>
               </div>
             </div>
             <div className="grid lg:pl-6 grid-cols-1 sm:grid-cols-3 items-start lg:grid-cols-1 gap-6">

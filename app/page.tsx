@@ -151,7 +151,7 @@ export default function Home() {
 
       <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
     </div>
-  );
+  );     
 }
 
 function WaitlistForm() {
