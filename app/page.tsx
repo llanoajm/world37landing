@@ -124,7 +124,6 @@ export default function Home() {
              </div>
           
           <ScrollPane />
-          <ScrollPaneAlt />
           <BlackInfoSection 
             mainTitle="Pioneering the Future of Interactive Storytelling"
             sideVisualComponent={<NeonMaze />}
