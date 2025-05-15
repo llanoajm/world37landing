@@ -12,14 +12,11 @@ function Feature() {
                 <Badge variant="outline">Platform</Badge>
               </div>
               <div className="flex gap-2 flex-col">
-                <h2 className="text-3xl lg:text-5xl tracking-tighter max-w-xl text-left font-regular">
-                  Open-world Storytelling
+                <h2 className="text-3xl lg:text-4xl tracking-tighter max-w-xl text-left font-regular">
+                  Take the guardrails off.
                 </h2>
                 <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-left">
-                  Like a Minecraft for stories.
-                </p>
-                <p>
-                  Minecraft is a spatially open-world game. W37 is all about making narratively open-world games.
+                  The game engines of the past focused on how the game looks. W37 focuses on what actually happens in the game.
                 </p>
               </div>
             </div>
@@ -27,27 +24,27 @@ function Feature() {
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-primary" />
                 <div className="flex flex-col gap-1">
-                  <p>Smart Relationship Graphs</p>
+                  <p className="align-left">Smart Relationship Graphs</p>
                   <p className="text-muted-foreground text-sm">
-                    Every choice influences your relationships.
+                    Every choice influences character relationships and reputation.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-primary" />
                 <div className="flex flex-col gap-1">
-                  <p>Deep Memory Preservation</p>
+                  <p className="align-left">Deep Memory Preservation</p>
                   <p className="text-muted-foreground text-sm">
-                    Never lose a hold of what you've done in the past.
+                    Every character remembers everything that's happened.
                   </p>
                 </div>
               </div>
               <div className="flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-primary" />
                 <div className="flex flex-col gap-1">
-                  <p>Unexpected Agentic Subplots</p>
+                  <p className="align-left">Unexpected Agentic Subplots</p>
                   <p className="text-muted-foreground text-sm">
-                    Watch your world create and react to unexpected-yet-coherent events.
+                    Let your world run wild while staying true to your vision.
                   </p>
                 </div>
               </div>

@@ -19,13 +19,16 @@ export function ScrollPane() {
       initial={{ opacity: 0, y: 80, scale: 0.97 }}
       animate={controls}
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-      className="w-full max-w-none px-0 md:px-0 my-8 -mt-50"
+      className="w-full max-w-none px-0 md:px-0 my-8 -mt-100"
     >
-      <div className="w-full flex flex-col md:flex-row items-stretch bg-white/70 backdrop-blur-lg shadow-2xl  border border-gray-200 overflow-hidden min-h-[480px] md:min-h-[600px]">
+      <div className="w-full flex flex-col md:flex-row items-stretch bg-white backdrop-blur-lg shadow-2xl  border border-gray-200 overflow-hidden min-h-[480px] md:min-h-[600px]">
         {/* Text Pane */}
         <div className="flex-1 flex flex-col justify-center p-8 md:p-16 gap-6">
+          <h3 className="text-4xl md:text-4xl mb-2 text-gray-900 leading-tight">
+            Minecraft gave us infinite spatial freedom.
+          </h3>
           <h3 className="text-4xl md:text-6xl font-extrabold mb-2 text-gray-900 leading-tight">
-            A World of Dynamic Stories
+            We're giving you infinite narrative freedom.
           </h3>
           <p className="text-gray-700 text-xl md:text-2xl mb-4 max-w-2xl">
           Our stories will feel rich to you, your friends, and every character in your world! Create, share, and explore 3D story worlds with narrative branching, dynamic scene deployment, and generative agents to deliver deeply personalized experiences.
@@ -41,7 +44,7 @@ export function ScrollPane() {
                 alt="Apple logo"
                 className="w-7 h-7 object-contain"
               />
-              SOON
+              
             </a>
             <a
               href="#waitlist-form"
@@ -53,7 +56,7 @@ export function ScrollPane() {
                 alt="Android logo"
                 className="w-7 h-7 object-contain"
               />
-              SOON
+              
             </a>
             <a
               href="#waitlist-form"
@@ -71,12 +74,51 @@ export function ScrollPane() {
         </div>
         {/* Video Pane */}
         <div className="md:w-[600px] w-full flex items-center justify-center bg-gray-100/60 border-l border-gray-200">
-          <video
-            src="https://caojess.github.io/OfficialW37/chrotate.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            src="https://i.gifer.com/XoBP.gif"
+            alt="Showcase GIF"
+            className="w-full h-full object-cover min-h-[320px] md:min-h-[600px] max-h-[600px] rounded-none"
+          />
+        </div>
+      </div>
+    </motion.section>
+  );
+}
+
+export function ScrollPaneAlt() {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, scale: 1 });
+    }
+  }, [inView, controls]);
+
+  return (
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 80, scale: 0.97 }}
+      animate={controls}
+      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      className="w-full max-w-none px-0 md:px-0 my-8"
+    >
+      <div className="w-full flex flex-col md:flex-row-reverse items-stretch bg-white backdrop-blur-lg shadow-2xl  border border-gray-200 overflow-hidden min-h-[480px] md:min-h-[600px]">
+        {/* Text Pane */}
+        <div className="flex-1 flex flex-col justify-center p-8 md:p-16 gap-6">
+          <h3 className="text-3xl md:text-4xl mb-2 text-gray-900 leading-tight">
+            Imagine you run over a bunch of NPCs in GTA. You're chased by the police for a while, but then everyone forgets and nothing happens.
+          </h3>
+          <p className="text-gray-700 text-xl md:text-2xl mb-4 max-w-2xl">
+            With World37, it would be on all headlines, the NPC's family members would hunt you down, and... whatever behaviors you want as a creator. The possibilities are endless. Anything goes! All you have to do is write a system prompt and let your world run wild.
+          </p>
+        </div>
+        {/* Image Pane */}
+        <div className="md:w-[600px] w-full flex items-center justify-center bg-gray-100/60 border-r border-gray-200">
+          <img
+            src="https://images.steamusercontent.com/ugc/98348089947795110/E8D6A7F620BC59003EAA3178C5B597B64753B40D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+            alt="Dynamic NPC behavior example"
             className="w-full h-full object-cover min-h-[320px] md:min-h-[600px] max-h-[600px] rounded-none"
           />
         </div>

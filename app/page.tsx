@@ -7,25 +7,29 @@ import { NoiseOverlay } from "./components/ui/noise-overlay";
 import { ContainerScroll } from "./components/ui/container-scroll-animation";
 import { Check } from "lucide-react";
 import { Feature } from "./components/ui/feature";
-import { ScrollPane } from "./components/ui/scroll-pane";
+import { ScrollPane, ScrollPaneAlt } from "./components/ui/scroll-pane";
 import { WaitlistModal } from "./components/ui/waitlist-modal";
 import { useState } from "react";
-import { NeonMazeDemo } from "./components/ui/neon-maze-demo"
+import { NeonMazeDemo } from "./components/ui/neon-maze-demo";
+import { NeonMaze } from "./components/ui/neon-maze";
+import EnhancedAnimatedGradientBackground from "./components/ui/enhanced-animated-gradient-background";
+import { BlackInfoSection, GradientCallToActionSection } from "./components/ui/info-sections";
 
 function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#f7f9f8] border-b border-gray-100 h-16 flex items-center px-8">
       {/* Logo */}
-      <div className="flex items-center flex-shrink-0">
-        {/* Official PNG logo */}
-        <img
-          src="https://caojess.github.io/OfficialW37/W37logo.png"
-          alt="World37 Logo"
-          width={32}
-          height={32}
-          className="mr-2 object-contain"
-        />
-        <span className=" text-xl tracking-tight bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent z-50">world37</span>
+      <div className="flex items-center flex-shrink-0 text-[10px]">
+        <FuzzyText
+          fontSize={50}
+          baseIntensity={0.1}
+          hoverIntensity={0.3}
+          enableHover={true}
+          color="#000000"
+          className="font-mono z-50 text-[10px]"
+        >
+          WORLD37
+        </FuzzyText>
       </div>
       {/* Center links */}
       <div className="flex-1 flex justify-center">
@@ -59,23 +63,11 @@ export default function Home() {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
 
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden">
+    <div className="flex flex-col min-h-screen relative overflow-hidden bg-white">
       <Navbar onWaitlistClick={() => setWaitlistOpen(true)} />
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
-        <AnimatedGradientBackground 
-          gradientColors={[
-            "#ffffff",
-            "rgb(222, 173, 242)",
-            "rgb(247, 158, 158)",
-            "#FF6D00",
-            " #FFD600",
-            "#00E676",
-            "#3D5AFE"
-          ]}
-          Breathing={true}
-          startingGap={125}
-        />
+
         <NoiseOverlay 
           opacity={0.08}
           zIndex={5}
@@ -87,50 +79,89 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex items-center justify-center pt-32 z-10">
-        <main className="flex flex-col items-center w-full">
-          <Image
-            src="/image.png"
-            alt="World37"
-            width={200}
-            height={200}
-            className="mb-4"
-          />
-          <FuzzyText 
-            baseIntensity={0.2} 
-            hoverIntensity={0.4} 
-            enableHover={true}
-            color="#000000"
-            className="font-mono z-50"
-          >
-            WORLD37
-          </FuzzyText>
-          <p className="text-2xl mt-6 text-gray-500 text-center">
-            A new standard for scalable, technology-driven storytelling.
-          </p>
-          
-          <div className="-mt-20 w-full -mb-20">
-          <h2
-            className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-b from-black to-gray-400 bg-clip-text text-transparent mt-30 "
-          >
-            Pick your story, watch your world propagate.
-          </h2>
+      <div className="flex-1 flex items-center justify-center pt-12 z-10">
+        <main className="flex flex-col items-center w-full px-4">
+          {/* New Gradient Box Section */}
+          <div className="relative  w-full mx-auto sm:my-12 p-6 mb-12 sm:p-10 md:p-16 rounded-2xl shadow-xl flex flex-col items-center text-center">
+            <div className="absolute inset-0 w-full h-[100vh] rounded-2xl pointer-events-none overflow-hidden">
+            <EnhancedAnimatedGradientBackground 
+              Breathing={true}
+              animationSpeed={0.03}
+              breathingRange={6}
+            />
+            </div>
+            <NoiseOverlay
+               opacity={0.05}
+               className="absolute inset-0 w-full h-full pointer-events-none rounded-2xl"
+               zIndex={0}
+            />
+            <div className="relative z-10 flex flex-col items-center text-center w-full">
+               <Image
+                 src="/image.png"
+                 alt="World37 Central Image"
+                 width={180}
+                 height={180}
+                 className="mb-6 md:mb-8"
+               />
+               <h1 className="text-6xl md:text-8xl font-bold text-center text-white pb-2">
+                 The Game Engine for Storytelling
+               </h1>
+               <p className="text-lg sm:text-xl md:text-xl text-white max-w-3xl leading-relaxed pb-4 pt-4">
+                 W37 understands your codebase and automatically generates agentic characters, dynamic storylines, and relationship graphs at scale. Tell us your vision, and we'll make your story come to life.
+               </p>
 
-          <div className="-mt-60">
-            <ContainerScroll titleComponent={null}>
-              <Feature />
-            </ContainerScroll>
-          </div>
-            
-          </div>
+               </div>
+               
+               <div className="-mt-20 w-full">
+
+               <div className="-mt-60 z-50">
+                 <ContainerScroll titleComponent={null}>
+                   <Feature />
+                 </ContainerScroll>
+               </div>
+             </div>
+               
+             </div>
+          
           <ScrollPane />
+          <ScrollPaneAlt />
+          <BlackInfoSection 
+            mainTitle="Pioneering the Future of Interactive Storytelling"
+            sideVisualComponent={<NeonMaze />}
+            featurePoints={[
+              {
+                icon: "💡",
+                title: "Advanced AI Storytelling",
+                text: "Pioneering advancements in real-time content generation, procedural 3D environments, shared agentic context, and emergent behaviors at scale."
+              },
+              {
+                icon: "📱",
+                title: "Our Debut Mobile Game",
+                text: "We\'re starting with our own episodes-style mobile game, showcasing the power of truly dynamic narratives."
+              },
+              {
+                icon: "🎨",
+                title: "Platform for Creators",
+                text: "Soon, we\'ll be opening a platform for creators like you to build and share your own agentic video games."
+              },
+              {
+                icon: "🗺️",
+                title: "Expansive Roadmap",
+                text: "Our roadmap includes integration with platforms like Roblox, a public API for developers, and expanding our \'Episodes\' concept to new frontiers."
+              }
+            ]}
+          />
+          <GradientCallToActionSection 
+            headline="Supercharge Your Narrative-Making Abilities"
+            subHeadline="Today, you can vibe-code a video game, but crafting a compelling story with characters that feel real has always been the challenge. World37 is here to amplify your creative power. We\'ll be with you every step of the way."
+          />
           {/* Showcase Section */}
           <section className="w-full flex flex-col lg:flex-row items-stretch justify-center py-12 px-0">
             {/* Left: Endless Possibilities with images */}
             <div className="flex-[0.8] min-w-0 flex flex-col justify-center bg-white/70 dark:bg-black backdrop-blur-lg shadow-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-8 md:p-12 gap-6 md:gap-10">
             <h1 className="text-base sm:text-lg md:text-2xl text-gray-800 dark:text-gray-100 text-center max-w-4xl font-bold mb-1">More than a videogame studio</h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-100 text-center max-w-3xl font-mono mb-4">
-                Pioneering advancements in real-time content generation, procedural 3D environments, and emergent behaviors at scale. <br /> World37 strives to create lightweight, model-side experiences. We look to provide a story-engine to creators around the world to leverage the infinite possibilities of generative AI <span className="underline">without losing the thread.</span>
+                Pioneering advancements in real-time content generation, procedural 3D environments, shared agentic context, and emergent behaviors at scale. <br /> World37 strives to create lightweight, model-side experiences. We look to provide a story-engine to creators around the world to leverage the infinite possibilities of generative AI <span className="underline">without losing the thread.</span>
               </p>
           
               <div className="flex flex-row flex-wrap items-center justify-center gap-4 w-full">
