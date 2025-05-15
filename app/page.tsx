@@ -42,7 +42,7 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
         <a
           href="#"
           onClick={e => { e.preventDefault(); onWaitlistClick(); }}
-          className="ml-4 px-5 py-2 rounded-lg bg-black text-white font-mono text-base font-semibold shadow hover:bg-gray-900 transition-colors"
+          className="ml-4 px-3 sm:px-5 py-2 text-sm sm:text-base rounded-lg bg-black text-white font-mono font-semibold shadow hover:bg-gray-900 transition-colors"
         >
           Join Waitlist
         </a>
@@ -114,7 +114,7 @@ export default function Home() {
                
                <div className="-mt-20 w-full">
 
-               <div className="-mt-60 z-50">
+               <div className="-mt-32 sm:-mt-48 md:-mt-60 z-50">
                  <ContainerScroll titleComponent={null}>
                    <Feature />
                  </ContainerScroll>

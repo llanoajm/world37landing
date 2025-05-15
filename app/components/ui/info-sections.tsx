@@ -42,7 +42,7 @@ export function BlackInfoSection({ mainTitle, featurePoints, sideVisualComponent
         <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-stretch">
           {/* Vertical Neon Sliver - occupies a small part of the width on medium+ screens */}
           {sideVisualComponent && (
-            <div className="w-full md:w-32 lg:w-40 flex-none order-first md:order-first hidden md:flex flex-col items-center justify-start relative overflow-hidden rounded-xl">
+            <div className="w-full md:w-32 lg:w-40 flex-none order-first md:order-first hidden md:flex flex-col items-center justify-start relative overflow-hidden">
               {/* This div will act as the container for the tall, thin visual. */}
               {/* The visual itself should be styled to fill height and be a continuous animation. */}
               <div className="sticky top-0 h-screen max-h-[80vh] w-full">
