@@ -108,10 +108,10 @@ export function ScrollPaneAlt() {
         {/* Text Pane */}
         <div className="flex-1 flex flex-col justify-center p-8 md:p-16 gap-6">
           <h3 className="text-3xl md:text-4xl mb-2 text-gray-900 leading-tight">
-            Imagine you run over a bunch of NPCs in GTA. You're chased by the police for a while, but then everyone forgets and nothing happens.
+            Tired of playing GTA story mode where everyone forgets everything and nothing ever happens after you're done with the plot?
           </h3>
           <p className="text-gray-700 text-xl md:text-2xl mb-4 max-w-2xl">
-            With World37, it would be on all headlines, the NPC's family members would hunt you down, and... whatever behaviors you want as a creator. The possibilities are endless. Anything goes! All you have to do is write a system prompt and let your world run wild.
+            With World37, everything goes on the headlines, the NPCs remember you, and... whatever behaviors you want as a creator. The possibilities are endless. Anything goes! All you have to do is write a system prompt and let your world run wild.
           </p>
         </div>
         {/* Image Pane */}
