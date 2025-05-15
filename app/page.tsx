@@ -155,26 +155,7 @@ export default function Home() {
             headline="Supercharge Your Narrative-Making Abilities"
             subHeadline="Today, you can vibe-code a video game, but crafting a compelling story with characters that feel real has always been the challenge. World37 is here to amplify your creative power. We\'ll be with you every step of the way."
           />
-          {/* Showcase Section */}
-          <section className="w-full flex flex-col lg:flex-row items-stretch justify-center py-12 px-0">
-            {/* Left: Endless Possibilities with images */}
-            <div className="flex-[0.8] min-w-0 flex flex-col justify-center bg-white/70 dark:bg-black backdrop-blur-lg shadow-2xl border border-gray-200 dark:border-gray-700 p-4 sm:p-8 md:p-12 gap-6 md:gap-10">
-            <h1 className="text-base sm:text-lg md:text-2xl text-gray-800 dark:text-gray-100 text-center max-w-4xl font-bold mb-1">More than a videogame studio</h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-800 dark:text-gray-100 text-center max-w-3xl font-mono mb-4">
-                Pioneering advancements in real-time content generation, procedural 3D environments, shared agentic context, and emergent behaviors at scale. <br /> World37 strives to create lightweight, model-side experiences. We look to provide a story-engine to creators around the world to leverage the infinite possibilities of generative AI <span className="underline">without losing the thread.</span>
-              </p>
-          
-              <div className="flex flex-row flex-wrap items-center justify-center gap-4 w-full">
-                <Image src="/i1.png" alt="i1" width={300} height={300} className="rounded-2xl shadow-2xl shadow-[0_4px_32px_rgba(255,255,255,0.35)] object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
-                <Image src="/i2.png" alt="i2" width={300} height={300} className="rounded-2xl shadow-2xl shadow-[0_4px_32px_rgba(255,255,255,0.35)] object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
-                <Image src="/i3.png" alt="i3" width={300} height={300} className="rounded-2xl shadow-2xl shadow-[0_4px_32px_rgba(255,255,255,0.35)] object-cover w-full max-w-[200px] sm:max-w-[200px] md:max-w-[220px] h-auto" />
-              </div>
-            </div>
-            {/* Right: Neon Maze */}
-            <div className="flex-[0.7] min-w-0 min-h-[400px] max-h-[900px] overflow-hidden flex flex-col items-center justify-center bg-black">
-              <NeonMazeDemo />
-            </div>
-          </section>
+
         </main>
       </div>
       <Footer />

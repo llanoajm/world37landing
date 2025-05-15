@@ -119,7 +119,7 @@ export function GradientCallToActionSection({
   };
 
   return (
-    <section id={id} className="relative w-full max-w-none mx-auto sm:my-12 p-6 py-12 sm:p-10 md:p-16 flex flex-col items-center text-center overflow-hidden">
+    <section id={id} className="relative w-full max-w-none mx-auto sm:my-12  sm:p-10 md:p-16 flex flex-col items-center text-center overflow-hidden rounded-2xl">
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <EnhancedAnimatedGradientBackground 
           Breathing={true}
