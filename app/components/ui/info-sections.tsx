@@ -105,8 +105,8 @@ export function GradientCallToActionSection({
     const body = encodeURIComponent(
       `First Name: ${first}\nLast Name: ${last}\nEmail: ${email}\nEarly Testing: ${early ? "Yes" : "No"}`
     );
-    // In a real app, you\'d POST to an API endpoint here.
-    // For this example, we\'ll simulate with mailto and a delay.
+    // In a real app, you'd POST to an API endpoint here.
+    // For this example, well simulate with mailto and a delay.
     window.location.href = `mailto:llano@stanford.edu?subject=${subject}&body=${body}`;
     
     // Simulate submission time and success
@@ -142,7 +142,7 @@ export function GradientCallToActionSection({
         
         {submitted ? (
           <div className="p-6 bg-green-500/80 backdrop-blur-sm rounded-lg text-white text-xl md:text-2xl font-semibold">
-            Thank you for joining the waitlist! We\'ll be in touch soon.
+            Thank you for joining the waitlist! We'll be in touch soon.
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="w-full max-w-lg flex flex-col gap-5 items-center bg-black/30 backdrop-blur-sm p-6 sm:p-8 rounded-xl shadow-2xl">

@@ -137,23 +137,23 @@ export default function Home() {
               {
                 icon: "📱",
                 title: "Our Debut Mobile Game",
-                text: "We\'re starting with our own episodes-style mobile game, showcasing the power of truly dynamic narratives."
+                text: "We're starting with our own episodes-style mobile game, showcasing the power of truly dynamic narratives."
               },
               {
                 icon: "🎨",
                 title: "Platform for Creators",
-                text: "Soon, we\'ll be opening a platform for creators like you to build and share your own agentic video games."
+                text: "Soon, we'll be opening a platform for creators like you to build and share your own agentic video games."
               },
               {
                 icon: "🗺️",
                 title: "Expansive Roadmap",
-                text: "Our roadmap includes integration with platforms like Roblox, a public API for developers, and expanding our \'Episodes\' concept to new frontiers."
+                text: "Our roadmap includes integration with platforms like Roblox, a public API for developers, and expanding our \'Episodes concept to new frontiers."
               }
             ]}
           />
           <GradientCallToActionSection 
             headline="Supercharge Your Narrative-Making Abilities"
-            subHeadline="Today, you can vibe-code a video game, but crafting a compelling story with characters that feel real has always been the challenge. World37 is here to amplify your creative power. We\'ll be with you every step of the way."
+            subHeadline="Today, you can vibe-code a video game, but crafting a compelling story with characters that feel real has always been the challenge. World37 is here to amplify your creative power. We'll be with you every step of the way."
           />
 
         </main>
