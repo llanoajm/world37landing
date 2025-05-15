@@ -6,7 +6,7 @@ import EnhancedAnimatedGradientBackground from "./enhanced-animated-gradient-bac
 import { NoiseOverlay } from "./noise-overlay";
 
 interface FeaturePoint {
-  icon: string; // Placeholder for icon, e.g., a Unicode char or an SVG component path
+  // icon: string; // Removed icon
   title: string;
   text: string;
 }
@@ -62,11 +62,15 @@ export function BlackInfoSection({ mainTitle, featurePoints, sideVisualComponent
                   initial={{ opacity: 0, y: 50 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.2, ease: "easeOut" }}
-                  className="flex flex-col items-start p-6 bg-gray-900/50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  // Removed card-like styling (bg-gray-900/50, shadow)
+                  // Added padding to maintain spacing if background is removed
+                  className="flex flex-col items-start py-4" 
                 >
-                  <div className="text-4xl mb-4 text-orange-400">{point.icon}</div> {/* Icon placeholder */}
-                  <h3 className="text-2xl font-semibold mb-3 text-gray-100">{point.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">
+                  {/* <div className="text-4xl mb-4 text-orange-400">{point.icon}</div> Removed icon display */}
+                  <h3 className="text-2xl lg:text-3xl font-semibold mb-3 text-gray-100">
+                    {point.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-base lg:text-lg">
                     {point.text}
                   </p>
                 </motion.div>
