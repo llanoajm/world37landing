@@ -43,7 +43,7 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
         <a
           href="#"
           onClick={e => { e.preventDefault(); onWaitlistClick(); }}
-          className="ml-4 px-3 sm:px-5 py-2 text-xs sm:text-sm md:text-base rounded-lg bg-black text-white font-mono font-semibold shadow hover:bg-gray-900 transition-colors"
+          className="ml-4 px-2 text-[11px] sm:px-2 sm:text-sm md:px-5 md:text-base py-2 rounded-lg bg-black text-white font-mono font-semibold shadow hover:bg-gray-900 transition-colors"
         >
           Join Waitlist
         </a>
@@ -110,7 +110,7 @@ export default function Home() {
                <h1 className="text-6xl md:text-8xl font-bold text-center text-white pb-2">
                  The Game Engine for Storytelling
                </h1>
-               <p className="text-lg sm:text-xl md:text-xl text-white max-w-3xl leading-relaxed pb-4 pt-4">
+               <p className="text-base sm:text-lg md:text-xl text-white max-w-3xl leading-normal sm:leading-relaxed pb-4 pt-4">
                  W37 understands your codebase and automatically generates agentic characters, dynamic storylines, and relationship graphs at scale. Tell us your vision, and we'll make your story come to life.
                </p>
             </div>

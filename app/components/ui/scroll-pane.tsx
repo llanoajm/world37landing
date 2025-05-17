@@ -21,7 +21,7 @@ export function ScrollPane() {
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       className="w-full max-w-none px-0 md:px-0 my-8 -mt-100"
     >
-      <div className="w-full flex flex-col md:flex-row items-stretch bg-white backdrop-blur-lg shadow-2xl  border border-gray-200 overflow-hidden min-h-[480px] md:min-h-[600px]">
+      <div className="w-full flex flex-col xl:flex-row items-stretch bg-white backdrop-blur-lg shadow-2xl  border border-gray-200 overflow-hidden min-h-[480px] md:min-h-[600px]">
         {/* Text Pane */}
         <div className="flex-1 flex flex-col justify-center p-8 md:p-16 gap-6">
           <h3 className="text-4xl md:text-4xl mb-2 text-gray-900 leading-tight">

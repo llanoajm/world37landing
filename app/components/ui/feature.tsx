@@ -13,7 +13,7 @@ function Feature({ isFlatView = false }: FeatureProps) {
   const badgeVariant = isFlatView ? "outline" : "default"; // Assuming default badge is for dark BGs
 
   return (
-    <div className={`w-full ${isFlatView ? 'py-8' : 'py-[-10px]lg:py-40'}`}>
+    <div className={`w-full ${isFlatView ? '-py-4' : 'py-[-10px]lg:py-40'}`}>
       <div className="w-full">
         <div className={`grid rounded-lg ${isFlatView ? 'px-4 sm:p-8 mt-1' : 'p-8 container'} grid-cols-1 gap-8 items-center lg:grid-cols-2`}>
           <div className="flex gap-10 flex-col">
@@ -60,14 +60,14 @@ function Feature({ isFlatView = false }: FeatureProps) {
               </div>
             </div>
           </div>
-          <div className={`w-full rounded-md aspect-video flex items-center justify-center overflow-hidden ${isFlatView ? 'bg-gray-100' : 'bg-muted'}`}>
+          <div className={`w-full rounded-md aspect-square flex items-center justify-center overflow-hidden ${isFlatView ? 'bg-gray-100' : 'bg-muted'}`}>
             <video
               src="/dem.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover rounded-md"
+              className="w-full object-cover -mt-50 rounded-md"
             />
           </div>
         </div>
