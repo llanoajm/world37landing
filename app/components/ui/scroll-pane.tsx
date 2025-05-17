@@ -24,16 +24,16 @@ export function ScrollPane() {
       <div className="w-full flex flex-col xl:flex-row items-stretch bg-white backdrop-blur-lg shadow-2xl  border border-gray-200 overflow-hidden min-h-[480px] md:min-h-[600px]">
         {/* Text Pane */}
         <div className="flex-1 flex flex-col justify-center p-8 md:p-16 gap-6">
-          <h3 className="text-4xl md:text-4xl mb-2 text-gray-900 leading-tight">
+          <h3 className="text-4xl md:text-4xl mb-2 text-gray-900 leading-tight text-center xl:text-left">
             Minecraft gave us infinite spatial freedom.
           </h3>
-          <h3 className="text-4xl md:text-6xl font-extrabold mb-2 text-gray-900 leading-tight">
+          <h3 className="text-4xl md:text-6xl font-extrabold mb-2 text-gray-900 leading-tight text-center xl:text-left">
             We're giving you infinite narrative freedom.
           </h3>
-          <p className="text-gray-700 text-xl md:text-2xl mb-4 max-w-2xl">
+          <p className="text-gray-700 text-xl md:text-2xl mb-4 max-w-2xl text-center xl:text-left mx-auto xl:mx-0">
           Our stories will feel rich to you, your friends, and every character in your world! Create, share, and explore 3D story worlds with narrative branching, dynamic scene deployment, and generative agents to deliver deeply personalized experiences.
           </p>
-          <div className="flex flex-row gap-4 mt-4">
+          <div className="flex flex-row gap-4 mt-4 justify-center xl:justify-start">
             <a
               href="#waitlist-form"
               className="inline-flex items-center gap-3 px-6 sm:px-8 py-2 sm:py-3 rounded-xl bg-black text-white font-mono text-base sm:text-xl font-semibold shadow-lg hover:bg-gray-900 transition-colors border-2 border-black w-fit"
@@ -73,7 +73,7 @@ export function ScrollPane() {
           </div>
         </div>
         {/* Video Pane */}
-        <div className="md:w-[600px] w-full flex items-center justify-center bg-gray-100/60 border-l border-gray-200">
+        <div className="w-full xl:w-[600px] flex items-center justify-center bg-gray-100/60 xl:border-l border-gray-200 py-8 xl:py-0">
           <img
             src="https://i.gifer.com/XoBP.gif"
             alt="Showcase GIF"
