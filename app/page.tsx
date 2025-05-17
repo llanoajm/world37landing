@@ -124,34 +124,10 @@ export default function Home() {
              </div>
           
           <ScrollPane />
-          <ScrollPaneAlt />
-          <BlackInfoSection 
-            mainTitle="Pioneering the Future of Interactive Storytelling"
-            sideVisualComponent={<NeonMaze />}
-            featurePoints={[
-              {
 
-                title: "Advanced AI Storytelling",
-                text: "Pioneering advancements in real-time content generation, procedural 3D environments, shared agentic context, and emergent behaviors at scale."
-              },
-              {
-
-                title: "Our Debut Mobile Game",
-                text: "We're starting with our own episodes-style mobile game, showcasing the power of truly dynamic narratives."
-              },
-              {
-
-                title: "Platform for Creators",
-                text: "Soon, we'll be opening a platform for creators to build, share, and play their own agentic video games."
-              },
-              {
-                title: "Expansive Roadmap",
-                text: "Our roadmap includes a public API for developers, and expanding our \'Episodes' concept to new frontiers."
-              }
-            ]}
-          />
+        
           <GradientCallToActionSection 
-            headline="Supercharge Your Narrative-Making Abilities"
+            headline="Prompt your world!"
             subHeadline="Today, you can vibe-code a video game, but crafting a compelling story with characters that feel real has always been the challenge. World37 is here to amplify your creative power. We'll be with you every step of the way."
           />
 

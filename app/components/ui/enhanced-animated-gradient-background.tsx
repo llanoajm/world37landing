@@ -34,10 +34,10 @@ const EnhancedAnimatedGradientBackground = ({
          // Multiple gradient layers to create complex effect
          const background = `
             radial-gradient(70% 80% at 20% 10%, rgba(91, 33, 182, 0.7) 0%, transparent 60%),
-            radial-gradient(60% 70% at 80% 10%, rgba(157, 23, 77, 0.7) 0%, transparent 60%),
-            radial-gradient(60% 60% at 10% 70%, rgba(30, 64, 175, 0.6) 0%, transparent 65%),
-            radial-gradient(70% 70% at 90% 80%, rgba(194, 65, 12, 0.6) 0%, transparent 65%),
-            radial-gradient(120% 140% at 50% ${45 + factor}%, rgba(91, 33, 182, 0.6) 0%, rgba(157, 23, 77, 0.4) 30%, rgba(194, 65, 12, 0.3) 50%, rgba(101, 163, 13, 0.5) 75%, rgba(30, 64, 175, 0.5) 100%),
+            radial-gradient(60% 70% at 80% 10%, rgba(45, 187, 23, 0.6) 0%, transparent 60%),
+            radial-gradient(60% 60% at 10% 70%, rgba(247, 63, 124, 0.6) 0%, transparent 65%),
+            radial-gradient(70% 70% at 90% 80%, rgba(11, 238, 227, 0.59) 0%, transparent 65%),
+            radial-gradient(120% 140% at 50% ${45 + factor}%, rgba(224, 163, 57, 0.6) 0%, rgba(250, 180, 88, 0.4) 30%, rgba(227, 161, 134, 0.3) 50%, rgba(101, 163, 13, 0.5) 75%, rgba(112, 135, 209, 0.5) 100%),
             linear-gradient(to bottom right, #0A0A0A, #0A0A0A)
          `;
          
