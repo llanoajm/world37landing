@@ -14,6 +14,7 @@ import { NeonMazeDemo } from "./components/ui/neon-maze-demo";
 import { NeonMaze } from "./components/ui/neon-maze";
 import EnhancedAnimatedGradientBackground from "./components/ui/enhanced-animated-gradient-background";
 import { BlackInfoSection, GradientCallToActionSection } from "./components/ui/info-sections";
+import useMediaQuery from "./hooks/use-media-query";
 
 function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
   return (
@@ -42,7 +43,7 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
         <a
           href="#"
           onClick={e => { e.preventDefault(); onWaitlistClick(); }}
-          className="ml-4 px-3 sm:px-5 py-2 text-sm sm:text-base rounded-lg bg-black text-white font-mono font-semibold shadow hover:bg-gray-900 transition-colors"
+          className="ml-4 px-3 sm:px-5 py-2 text-xs sm:text-sm md:text-base rounded-lg bg-black text-white font-mono font-semibold shadow hover:bg-gray-900 transition-colors"
         >
           Join Waitlist
         </a>
@@ -61,6 +62,7 @@ function Footer() {
 
 export default function Home() {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
+  const showFlatFeatures = useMediaQuery('(max-width: 1023px)');
 
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden bg-white">
@@ -80,21 +82,23 @@ export default function Home() {
 
       {/* Content */}
       <div className="flex-1 flex items-center justify-center pt-12 z-10">
-        <main className="flex flex-col items-center w-full px-4">
-          {/* New Gradient Box Section */}
-          <div className="relative  w-full mx-auto sm:my-12 p-6 mb-12 sm:p-10 md:p-16 rounded-2xl shadow-xl flex flex-col items-center text-center">
-            <div className="absolute inset-0 w-full h-[100vh] rounded-2xl pointer-events-none overflow-hidden">
-            <EnhancedAnimatedGradientBackground 
-              Breathing={true}
-              animationSpeed={0.03}
-              breathingRange={6}
-            />
+        <main className="flex flex-col items-center w-full sm:px-4">
+          {/* Hero Section START */}
+          <div className="relative w-full mx-auto sm:my-12 px-0 py-10 sm:px-10 sm:py-10 md:px-16 md:py-16 mb-12 rounded-none sm:rounded-2xl shadow-xl flex flex-col items-center text-center">
+            {/* Gradient Background - height adjusts based on showFlatFeatures */}
+            <div className={`absolute inset-0 w-full ${showFlatFeatures ? 'h-full' : 'h-[100vh]'} rounded-none sm:rounded-2xl pointer-events-none overflow-hidden`}>
+              <EnhancedAnimatedGradientBackground 
+                Breathing={true}
+                animationSpeed={0.03}
+                breathingRange={6}
+              />
             </div>
             <NoiseOverlay
                opacity={0.05}
-               className="absolute inset-0 w-full h-full pointer-events-none rounded-2xl"
+               className="absolute inset-0 w-full h-full pointer-events-none rounded-none sm:rounded-2xl"
                zIndex={0}
             />
+            {/* Hero Content: Text and Image */}
             <div className="relative z-10 flex flex-col items-center text-center w-full">
                <Image
                  src="/image.png"
@@ -109,25 +113,31 @@ export default function Home() {
                <p className="text-lg sm:text-xl md:text-xl text-white max-w-3xl leading-relaxed pb-4 pt-4">
                  W37 understands your codebase and automatically generates agentic characters, dynamic storylines, and relationship graphs at scale. Tell us your vision, and we'll make your story come to life.
                </p>
+            </div>
 
-               </div>
-               
-               <div className="-mt-20 w-full">
+            {/* Conditional ContainerScroll (Desktop) - Renders INSIDE the main hero div */}
+            {!showFlatFeatures && (
+              <div className="-mt-20 w-full">
+                <div className="-mt-32 sm:-mt-48 md:-mt-60 z-50">
+                  <ContainerScroll titleComponent={null}>
+                    <Feature isFlatView={false} />
+                  </ContainerScroll>
+                </div>
+              </div>
+            )}
+          </div> {/* Hero Section END */}
 
-               <div className="-mt-32 sm:-mt-48 md:-mt-60 z-50">
-                 <ContainerScroll titleComponent={null}>
-                   <Feature />
-                 </ContainerScroll>
-               </div>
-             </div>
-               
-             </div>
+          {/* Conditional Flat Features Section (Mobile) - Renders OUTSIDE and AFTER hero div */}
+          {showFlatFeatures && (
+            <div className="w-full mt-4 mb-8 p-0 sm:p-0 bg-transparent sm:rounded-lg">
+              <Feature isFlatView={true} />
+            </div>
+          )}
           
           <ScrollPane />
 
-        
           <GradientCallToActionSection 
-            headline="Prompt your world!"
+            headline="Supercharge Your Narrative-Making Abilities"
             subHeadline="Today, you can vibe-code a video game, but crafting a compelling story with characters that feel real has always been the challenge. World37 is here to amplify your creative power. We'll be with you every step of the way."
           />
 
