@@ -1,0 +1,36 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Domain redirects at Netlify level
+[[redirects]]
+  from = "https://world37.app/*"
+  to = "https://w37.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://world37.app/*"
+  to = "https://w37.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.world37.app/*"
+  to = "https://w37.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.world37.app/*"
+  to = "https://w37.ai/:splat"
+  status = 301
+  force = true
+
+# Edge function to handle redirects
+[[edge_functions]]
+  path = "/*"
+  function = "redirect-handler"

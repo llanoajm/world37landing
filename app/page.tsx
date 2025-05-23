@@ -26,7 +26,7 @@ function Navbar({ onWaitlistClick }: { onWaitlistClick: () => void }) {
           baseIntensity={0.1}
           hoverIntensity={0.3}
           enableHover={true}
-          color="#000000"
+          color="rgb(195, 0, 101)"
           className="font-mono z-50 text-[10px]"
         >
           WORLD37
